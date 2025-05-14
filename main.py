@@ -4,8 +4,6 @@ from pydantic import BaseModel
 import joblib
 from sklearn.base import BaseEstimator, ClassifierMixin
 from scipy.stats import mode
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning)
 
 class HybridModel(BaseEstimator, ClassifierMixin):
     def __init__(self, model1, model2, model3):
